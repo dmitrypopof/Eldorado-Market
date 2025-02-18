@@ -17,3 +17,9 @@
 
 ### 3.Формирование allure-отчета - path/
 
+### 4. Прочее:
+1. Поиск activities -
+   * adb shell dumpsys activity activities | grep mActivityComponent | cut -d= -f2 | sort -u
+   * "appium:appPackage": "ru.mvm.eldo"
+   * "appium:appActivity": ".presentation.splash.activity.SplashActivity"
+
