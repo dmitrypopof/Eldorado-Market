@@ -1,6 +1,6 @@
-### 1. Автотесты для мобильного приложения Eldorado
+### 1. РђРІС‚РѕС‚РµСЃС‚С‹ РґР»СЏ РјРѕР±РёР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ Eldorado
 
-* Версия приложения
+* Р’РµСЂСЃРёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
 * Java Amazon Corretto version 17.0.12
 * Junit 5
 * Appium version 2.12.1
@@ -8,17 +8,17 @@
 * Allure-report version 2.24.0
 * Emulator Pixel 7 API 35
 
-### 2. Ключевые проверки для smoke-тестирования:
+### 2. РљР»СЋС‡РµРІС‹Рµ РїСЂРѕРІРµСЂРєРё РґР»СЏ smoke-С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ:
 1.
 
 2.
 
 3.
 
-### 3.Формирование allure-отчета - path/
+### 3.Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ allure-РѕС‚С‡РµС‚Р° - path/
 
-### 4. Прочее:
-1. Поиск activities -
+### 4. РџСЂРѕС‡РµРµ:
+1. РџРѕРёСЃРє activities -
    * adb shell dumpsys activity activities | grep mActivityComponent | cut -d= -f2 | sort -u
    * "appium:appPackage": "ru.mvm.eldo"
    * "appium:appActivity": ".presentation.splash.activity.SplashActivity"
