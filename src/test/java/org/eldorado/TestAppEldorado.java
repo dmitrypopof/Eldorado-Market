@@ -38,7 +38,7 @@ public class TestAppEldorado extends TestBase {
         pressKeyboardButtons("tv");
         pressKeyboardButton(AndroidKey.ENTER);
         String foundTitleText = driver.findElement(RESULT_COUNT_SEARCH).getText();
-        softAssertions.assertThat(foundTitleText).contains("�������");
+        softAssertions.assertThat(foundTitleText).contains("Найдено");
         driver.findElement(FILTR).click();
         driver.findElement(MANUFACTURER).click();
         driver.findElement(XAOMI).click();
