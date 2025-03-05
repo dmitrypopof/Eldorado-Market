@@ -16,7 +16,7 @@
 
 
 
-<p style="text-align: center;">
-  <img src="src/test/resources/img.png" alt="Image" />
+<p align="center">
+<img src="src/test/resources/img.png" />
 </p>
 
