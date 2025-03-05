@@ -1,10 +1,8 @@
 package org.eldorado;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.support.PageFactory;
 
 import java.net.MalformedURLException;
 
