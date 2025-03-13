@@ -1,5 +1,6 @@
 package org.eldorado.setting;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.options.BaseOptions;
 
@@ -8,9 +9,17 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
-    private AndroidDriver driver;
+    private AppiumDriver driver;
 
-    public AndroidDriver setUp() throws MalformedURLException {
+    public AppiumDriver setUp(Platform platform) throws MalformedURLException {
+        return switch (platform) {
+            case IOS -> createIOSDriver();
+            case ANDROID -> createAndroidDriver();
+            default -> throw new IllegalArgumentException("No such platform");
+        };
+    }
+
+    public AppiumDriver createAndroidDriver() throws MalformedURLException {
         URL remoteUrl = new URL("http://127.0.0.1:4723");
         BaseOptions options = new BaseOptions()
                 .amend("platformName", "Android")
@@ -26,6 +35,10 @@ public class DriverFactory {
         driver = new AndroidDriver(remoteUrl, options);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         return driver;
+    }
+
+    public AppiumDriver createIOSDriver(){
+        return null;
     }
 
 }

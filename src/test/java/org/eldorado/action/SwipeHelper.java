@@ -1,6 +1,7 @@
 package org.eldorado.action;
 
-import io.appium.java_client.android.AndroidDriver;
+
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.qameta.allure.Step;
@@ -19,9 +20,9 @@ import static org.eldorado.action.Direction.*;
 
 
 public class SwipeHelper  {
-    private AndroidDriver driver;
+    private AppiumDriver driver;
 
-    public SwipeHelper(AndroidDriver driver) {
+    public SwipeHelper(AppiumDriver driver) {
         this.driver = driver;
     }
 

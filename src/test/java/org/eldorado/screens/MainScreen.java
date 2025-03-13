@@ -1,6 +1,8 @@
 package org.eldorado.screens;
 
 import io.appium.java_client.AppiumBy;
+
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
@@ -12,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 
 public class MainScreen extends Screen{
-    public MainScreen(AndroidDriver driver) {
+    public MainScreen(AppiumDriver driver) {
         super(driver);
     }
 
@@ -98,7 +100,7 @@ public class MainScreen extends Screen{
 
     @Step("Block screen")
     public MainScreen blockScreen(int durationSec){
-        driver.lockDevice(Duration.ofSeconds(durationSec));
+        ((AndroidDriver)driver).lockDevice(Duration.ofSeconds(durationSec));
         return new MainScreen(driver);
     }
 
@@ -113,7 +115,7 @@ public class MainScreen extends Screen{
 
     @Step("Press keys {keys}")
     public MainScreen pressKeyboardButton(AndroidKey keys) {
-        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+        ((AndroidDriver)driver).pressKey(new KeyEvent(AndroidKey.ENTER));
         return new MainScreen(driver);
     }
 
